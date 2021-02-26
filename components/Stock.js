@@ -1,6 +1,5 @@
 import React, { Component, useEffect, useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Plotly from 'react-native-plotly';
+import { Dimensions, StyleSheet, Text, View } from 'react-native';
 
 
 
@@ -29,19 +28,9 @@ const Stock = () => {
             .catch((error) => console.error(error));
     };
 
-    const data = {
-        x: [1, 2, 3, 4, 5],
-        y: [1, 2, 3, 4, 8],
-        type: 'scatter',
-    };
-
     return (
         <View style={styles.stockContainer}>
-            <Plotly
-                data={data}
-                layout={layout}
-            />
-
+            
         </View>
     );
 };
